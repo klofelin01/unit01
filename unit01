@@ -1,0 +1,9 @@
+/* isula filters free */
+void isula_filters_free(struct isula_filters *filters)
+{
+    size_t i;
+    if (filters == NULL) {
+        return;
+    }
+    for (i = 0; i < filters->len; i++) {
+        free(filters->keys[i]);
